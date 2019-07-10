@@ -15,17 +15,25 @@ console.log(loaf.hydration());
 
 // drill 2
 
-const obj = {
+const obj2 = {
   foo: 1,
   bar: 2,
   fum: 3,
   quux: 4,
 };
 
-for (const key in obj) {
-  console.log(`${key}: ${obj[key]}`);
+for (const key in obj2) {
+  console.log(`${key}: ${obj2[key]}`);
 }
 
-console.log(obj.foo);
+console.log(obj2.foo);
+
+// drill 3
+const obj3 = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'],
+};
+
+console.log(obj3.meals[3]);
+
 
 
