@@ -12,3 +12,20 @@ loaf.hydration = function() {
 };
 
 console.log(loaf.hydration());
+
+// drill 2
+
+const obj = {
+  foo: 1,
+  bar: 2,
+  fum: 3,
+  quux: 4,
+};
+
+for (const key in obj) {
+  console.log(`${key}: ${obj[key]}`);
+}
+
+console.log(obj.foo);
+
+
