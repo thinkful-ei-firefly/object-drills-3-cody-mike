@@ -63,5 +63,32 @@ for (const index in charList) {
 }
 
 
+// drill 6
 
+const cipher = {
+  a: 2,
+  b: 3,
+  c: 4,
+  d: 5,
+};
 
+function decodeChar(word) {
+  const firstLetter = word[0];
+  for (const key in cipher) {
+    if (key === firstLetter) {
+      return word[cipher[key]-1];
+    }
+  }
+  return ' ';
+}
+
+function decodeWords(msg) {
+  const msgList = msg.split(' ');
+  let decodedMessage = ''; // why does undefined get returned if we do let decodedMessage; instead of setting it to empty string?
+  for (const index in msgList) {
+    decodedMessage += decodeChar(msgList[index]);
+  }
+  return decodedMessage;
+}
+
+console.log(decodeWords('craft block argon meter bells brown croon droop'));
