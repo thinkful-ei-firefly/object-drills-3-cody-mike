@@ -37,7 +37,7 @@ console.log(obj3.meals[3]);
 
 
 
-// drill 4
+// drill 4 & 5
 
 const char1 = {
   name: 'Aragorn',
@@ -48,12 +48,20 @@ const char2 = {
   jobTitle: 'Archer',
 };
 const char3 = {
-  name: 'Gemli',
+  name: 'Gimli',
   jobTitle: 'Killer',
 };
 
 const charList = [char1, char2, char3];
 
 for (const index in charList) {
-  console.log(`Name: ${charList[index].name}, Job Title: ${charList[index].jobTitle}`);
+  if(charList[index].jobTitle !== 'Leader'){
+    charList[index].boss = 'Aragorn';
+  }
+  //console.log(`Name: ${charList[index].name}, Job Title: ${charList[index].jobTitle} Boss: ${charList[index].boss ? charList[index].boss : 'Doesn\'t report to anybody'}`);
+  console.log(`${charList[index].jobTitle} ${charList[index].name} ${charList[index].boss ? 'reports to ' + charList[index].boss : 'doesn\'t report to anybody'}`);
 }
+
+
+
+
