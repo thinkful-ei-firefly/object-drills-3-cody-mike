@@ -37,3 +37,23 @@ console.log(obj3.meals[3]);
 
 
 
+// drill 4
+
+const char1 = {
+  name: 'Aragorn',
+  jobTitle: 'Leader',
+};
+const char2 = {
+  name: 'Legolas',
+  jobTitle: 'Archer',
+};
+const char3 = {
+  name: 'Gemli',
+  jobTitle: 'Killer',
+};
+
+const charList = [char1, char2, char3];
+
+for (const index in charList) {
+  console.log(`Name: ${charList[index].name}, Job Title: ${charList[index].jobTitle}`);
+}
